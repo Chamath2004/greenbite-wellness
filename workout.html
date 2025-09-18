@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Recipes | GreenBite Wellness</title>
+    <link rel="stylesheet" href="workout.css">
+</head>
+<body>
+    <div class="nav-container">
+        <!-- Logo -->
+        <section class="logo">
+            <img src="C:\Users\henna\OneDrive\Desktop\HTML\Your_paragraph_text-remssssssovebg-preview.png" alt="GreenBite Wellness Logo" loading="lazy">
+        </section>
+
+    
+        <header>
+            <!-- Desktop Navigation -->
+            <nav id="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Healthy Recipes</a></li>
+                    <li><a href="calculator.html">Calorie Calculator</a></li>
+                    <li><a href="workout.html">Workouts</a></li>
+                    <li><a href="mindfulness.html">Mindfulness</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <!-- Mobile Side Menu -->
+        <div class="side-menu" id="sideMenu">
+            <button class="close-btn" id="closeBtn" aria-label="Close menu">&times;</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Healthy Recipes</a></li>
+                    <li><a href="calculator.html">Calorie Calculator</a></li>
+                    <li><a href="workout.html">Workouts</a></li>
+                    <li><a href="mindfulness.html">Mindfulness</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="workout-container">
+        <h1>Workout Generator</h1>
+        
+        <form id="workout-form">
+            <div class="form-group">
+                <label for="body-part">Target Area</label>
+                <select id="body-part" required>
+                    <option value="">Select Body Part</option>
+                    <option value="full">Full Body</option>
+                    <option value="arms">Arms</option>
+                    <option value="legs">Legs</option>
+                    <option value="core">Core</option>
+                    <option value="upper">Upper Body</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="equipment">Equipment</label>
+                <select id="equipment" required>
+                    <option value="">Select Equipment</option>
+                    <option value="none">No Equipment</option>
+                    <option value="dumbbells">Dumbbells</option>
+                    <option value="resistance">Resistance Bands</option>
+                    <option value="kettlebell">Kettle Bell</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="duration">Workout Duration (minutes)</label>
+                <input type="number" id="duration" min="5" max="60" value="20" required>
+            </div>
+            
+            <button type="submit">Generate Workout</button>
+        </form>
+        
+        <div id="workout-plan" class="workout-plan">
+            <!-- Workout will be generated here -->
+        </div>
+        
+        <audio id="timer-sound" src="./assets/beep.mp3" preload="auto"></audio>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="C:\Users\henna\OneDrive\Desktop\HTML\Your_paragraph_text-remssssssovebg-preview.png" alt="GreenBite Wellness" class="footer-logo">
+                <p>Helping you achieve balance through nutrition, fitness, and mindfulness.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="links-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="workout.html">Workouts</a></li>
+                        <li><a href="mindfulness.html">Mindfulness</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Join Our Community</h3>
+                <p>Subscribe to receive wellness tips and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 GreenBite Wellness. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+     <script src="workout.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Recipes | GreenBite Wellness</title>
+    <link rel="stylesheet" href="recipes.css">
+</head>
+<body>
+    <div class="nav-container">
+        <!-- Logo -->
+        <section class="logo">
+            <img src="C:\Users\henna\OneDrive\Desktop\HTML\Your_paragraph_text-remssssssovebg-preview.png" alt="GreenBite Wellness Logo" loading="lazy">
+        </section>
+
+    
+        <header>
+            <!-- Desktop Navigation -->
+            <nav id="desktop-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Healthy Recipes</a></li>
+                    <li><a href="calculator.html">Calorie Calculator</a></li>
+                    <li><a href="workout.html">Workouts</a></li>
+                    <li><a href="mindfulness.html">Mindfulness</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <!-- Mobile Side Menu -->
+        <div class="side-menu" id="sideMenu">
+            <button class="close-btn" id="closeBtn" aria-label="Close menu">&times;</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Healthy Recipes</a></li>
+                    <li><a href="calculator.html">Calorie Calculator</a></li>
+                    <li><a href="workout.html">Workouts</a></li>
+                    <li><a href="mindfulness.html">Mindfulness</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <main class="recipes-container">
+        <h1>Healthy Recipes</h1>
+        
+        <div class="search-filter">
+            <input type="text" id="search-input" placeholder="Search recipes...">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+                <option value="snack">Snacks</option>
+            </select>
+        </div>
+
+        <div class="recipes-grid" id="recipes-grid">
+            <!-- Recipe cards will be inserted here by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Recipe Modal -->
+    <div class="modal" id="recipe-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="C:\Users\henna\OneDrive\Desktop\HTML\Your_paragraph_text-remssssssovebg-preview.png" alt="GreenBite Wellness" class="footer-logo">
+                <p>Helping you achieve balance through nutrition, fitness, and mindfulness.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="links-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="workout.html">Workouts</a></li>
+                        <li><a href="mindfulness.html">Mindfulness</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Join Our Community</h3>
+                <p>Subscribe to receive wellness tips and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 GreenBite Wellness. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="recipes.js"></script>
+</body>
+</html>
