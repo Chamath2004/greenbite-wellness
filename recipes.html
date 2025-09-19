@@ -8,13 +8,15 @@
 </head>
 <body>
     <div class="nav-container">
-        <!-- Logo - Changed from section to div -->
-        <div class="logo">
-            <img src="assets/logo.png" alt="GreenBite Wellness Logo" loading="lazy">
-        </div>
+        <!-- Logo -->
+        <section class="logo">
+            <img src="Your_paragraph_text-remssssssovebg-preview.png" alt="GreenBite Wellness Logo" loading="lazy">
+        </section>
 
+    
         <header>
-            <nav id="desktop-nav" aria-label="Main navigation">
+            <!-- Desktop Navigation -->
+            <nav id="desktop-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="recipes.html">Healthy Recipes</a></li>
@@ -25,6 +27,7 @@
                 </ul>
             </nav>
 
+            <!-- Mobile Hamburger -->
             <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
                 <span></span>
                 <span></span>
@@ -35,7 +38,7 @@
         <!-- Mobile Side Menu -->
         <div class="side-menu" id="sideMenu">
             <button class="close-btn" id="closeBtn" aria-label="Close menu">&times;</button>
-            <nav aria-label="Mobile navigation">
+            <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="recipes.html">Healthy Recipes</a></li>
@@ -48,12 +51,13 @@
         </div>
     </div>
 
+
     <main class="recipes-container">
         <h1>Healthy Recipes</h1>
         
-        <div class="search-filter" aria-label="Recipe search and filter">
-            <input type="text" id="search-input" placeholder="Search recipes..." aria-label="Search recipes">
-            <select id="category-filter" aria-label="Filter by category">
+        <div class="search-filter">
+            <input type="text" id="search-input" placeholder="Search recipes...">
+            <select id="category-filter">
                 <option value="all">All Categories</option>
                 <option value="breakfast">Breakfast</option>
                 <option value="lunch">Lunch</option>
@@ -62,15 +66,15 @@
             </select>
         </div>
 
-        <div class="recipes-grid" id="recipes-grid" role="region" aria-label="Recipe cards">
+        <div class="recipes-grid" id="recipes-grid">
             <!-- Recipe cards will be inserted here by JavaScript -->
         </div>
     </main>
 
     <!-- Recipe Modal -->
-    <div class="modal" id="recipe-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal" id="recipe-modal">
         <div class="modal-content">
-            <button class="close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+            <span class="close-btn">&times;</span>
             <div class="modal-body">
                 <!-- Content will be inserted here by JavaScript -->
             </div>
@@ -80,7 +84,7 @@
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="assets/logo.png" alt="GreenBite Wellness" class="footer-logo">
+                <img src="Your_paragraph_text-remssssssovebg-preview.png" alt="GreenBite Wellness" class="footer-logo">
                 <p>Helping you achieve balance through nutrition, fitness, and mindfulness.</p>
             </div>
 
@@ -94,27 +98,20 @@
                         <li><a href="mindfulness.html">Mindfulness</a></li>
                     </ul>
                 </div>
-                <div class="links-column">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="calculator.html">Calculator</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
             </div>
 
             <div class="footer-newsletter">
                 <h3>Join Our Community</h3>
                 <p>Subscribe to receive wellness tips and updates</p>
-                <form class="newsletter-form" aria-label="Newsletter subscription">
-                    <input type="email" placeholder="Your email address" required aria-label="Your email address">
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
                     <button type="submit">Subscribe</button>
                 </form>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; <span id="current-year">2023</span> GreenBite Wellness. All rights reserved.</p>
+            <p>&copy; 2023 GreenBite Wellness. All rights reserved.</p>
             <div class="legal-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Use</a>
