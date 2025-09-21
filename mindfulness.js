@@ -106,20 +106,24 @@ function startBreathingExercise() {
 
 function breathingCycle() {
     if (inhale) {
+        // Transition from "Breathe In" to "Hold"
         breathingText.textContent = "Hold";
         breathHold = true;
+        inhale = false;
     } else if (breathHold) {
+        // Transition from "Hold" to "Breathe Out"
         breathingText.textContent = "Breathe Out";
         breathingCircle.style.transform = "scale(1)";
         breathingCircle.style.backgroundColor = "#e3f2fd";
         breathHold = false;
     } else {
+        // Transition from "Breathe Out" to "Breathe In"
         breathingText.textContent = "Breathe In";
         breathingCircle.style.transform = "scale(1.2)";
         breathingCircle.style.backgroundColor = "#c8e6c9";
+        inhale = true;
         cycleCount++;
     }
-    inhale = !inhale;
 }
 
 function stopBreathingExercise() {
@@ -216,20 +220,27 @@ function updateTimerDisplay() {
 
 // Ambient Sounds Functions
 function toggleAmbientSound(soundType) {
-    // Stop all sounds first
-    rainSound.pause();
-    forestSound.pause();
-    wavesSound.pause();
-    
-    // Remove active class from all buttons
-    soundBtns.forEach(btn => btn.classList.remove('active'));
-    
-    // Play selected sound if not already playing
     const soundElement = document.getElementById(`${soundType}-sound`);
-    if (soundElement.paused) {
+    const soundButton = document.querySelector(`.sound-btn[data-sound="${soundType}"]`);
+    
+    // Check if the clicked sound is already playing
+    if (!soundElement.paused) {
+        // If it's playing, pause it and remove active class
+        soundElement.pause();
+        soundButton.classList.remove('active');
+    } else {
+        // If it's not playing, stop all other sounds first
+        rainSound.pause();
+        forestSound.pause();
+        wavesSound.pause();
+        
+        // Remove active class from all buttons
+        soundBtns.forEach(btn => btn.classList.remove('active'));
+        
+        // Play the selected sound
         soundElement.currentTime = 0;
         soundElement.play();
-        document.querySelector(`.sound-btn[data-sound="${soundType}"]`).classList.add('active');
+        soundButton.classList.add('active');
     }
 }
 

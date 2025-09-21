@@ -234,6 +234,17 @@ window.addEventListener('click', (e) => {
   if (e.target === modal) modal.style.display = 'none';
 });
 
+// Make sure the close button is visible and working
+document.addEventListener('DOMContentLoaded', function() {
+  const closeBtn = document.querySelector('.modal .close-btn');
+  if (closeBtn) {
+    closeBtn.style.display = 'flex';
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+  }
+});
+
 // Initialize
 showRecipes(recipes);
 

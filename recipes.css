@@ -198,12 +198,32 @@ body {
 
 .modal-content {
     background: white;
+    position: relative;
     margin: 2rem auto;
     padding: 2rem;
     max-width: 800px;
     border-radius: 8px;
-    position: relative;
 }
+
+/* Recipe Modal Close Button */
+.modal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+}
+
 
 .close-btn {
     position: absolute;
